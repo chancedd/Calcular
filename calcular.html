@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  </head>
+<body>
+    <!--Header-->
+ <header>
+   <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="logo.png" alt="" class="logo">
+        </a>
+        <ul>
+           <li><a class="active" href="index.html">Inicio</a></li>
+            <li><a href="calcular.html">calcular</a></li>
+         
+        </ul>
+    </nav>
+</header>	
+<!--main-->
+<img src="img.jpg"  width="400">
+<p class="parrafo1">
+    Calcular la edad real  de tu perro no siempre es sencillo, ya que el tiempo no pasa igual de rápido durante los primeros años de desarrollo que cuando el perro ya es adulto. 
+
+</p>
+<div class="container">
+    <input type="text" id="numero">
+    <input type="button" value="calcular" onclick="edad()">
+    <div class="calculos" id="salida"></div>
+     
+    <script language="javascript">
+       function edad(){
+            var resp=parseInt(document.getElementById("numero").value);
+            var y= Math.log(resp);
+            var x = 16*(y)+31;
+            document.getElementById("salida").innerHTML ="La edad en años humanos es <br>"+Math.round(x)+" <br>(Según el mito ) su edad en años humanos es <br>"+resp*7;
+            }
+    </script>
+</div>
+<script type="text/javascript">
+          $(".btn").on("click", function () {
+            $(".menu").toggleClass("show");
+          });
+</script>
+</body>
+</html>
